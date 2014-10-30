@@ -1,0 +1,52 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JSON tool</title>
+	<link type="text/css" rel="stylesheet" href="css/json_tool.css">
+	<script type="text/javascript" charset="utf-8" src="js/json_tool.js"></script>
+</head>
+<body>
+	<div id="header"> 
+		<b>JSON Source</b>
+		<textarea id="rawJson">{"jsonGoesHere":true}</textarea>
+	</div>
+	<div id="actionBar">
+		<input id ="btnProcess" type="button" value="process" onclick="Process()">
+		<input id="btnToggle" type="button" value="hide" onclick="toggleHeader()">
+		<input id="btnClear" type="button" value="clear" onclick="clearJSON()">
+		<div class="uiLabelLeft">tab</div>
+		<select id="TabSize" onchange="TabSizeChanged()">
+			<option value="1">1</option>
+			<option value="2" selected="true">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+		</select>
+		&nbsp;
+		<input id="QuoteKeys" type="checkbox" onclick="QuoteKeysClicked()" checked="true">
+		<div class="uiLabelRight">""</div>
+		&nbsp;
+		<input id="CollapsibleView" type="checkbox" onclick="CollapsibleViewClicked()" checked="true">
+		<div class="uiLabelRight">+/-</div>
+		&nbsp;
+		<input id="btnSelect" type="button" value="select all" onclick="SelectAllClicked()">
+		<input id="btnExpand" type="button" value="expand" onclick="ExpandAllClicked()">
+		<div class="uiLabelCenter">or</div>
+		<input id="btnCollapse" type="button" value="collapse" onclick="CollapseAllClicked()">
+		<div class="uiLabelLeft">to level:</div>
+		<input id="btnCollapse2" type="button" value="2" onclick="CollapseLevel(3)">
+		<input id="btnCollapse3" type="button" value="3" onclick="CollapseLevel(4)">
+		<input id="btnCollapse4" type="button" value="4" onclick="CollapseLevel(5)">
+		<input id="btnCollapse5" type="button" value="5" onclick="CollapseLevel(6)">
+		<input id="btnCollapse5" type="button" value="6" onclick="CollapseLevel(7)">
+		<input id="btnCollapse5" type="button" value="7" onclick="CollapseLevel(8)">
+		<input id="btnCollapse5" type="button" value="8" onclick="CollapseLevel(9)">
+	</div>
+	<div id="Canvas">
+		<pre class="CodeContainer"></pre>
+	</div>
+	<script language="javascript">init();</script>
+</body>
+</html>
